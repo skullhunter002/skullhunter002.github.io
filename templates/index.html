@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Profile Picture -->
+        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Picture" class="profile-picture">
+
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is where you can find information about me and my projects.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer...</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projects-container">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>You can reach me at example@example.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
